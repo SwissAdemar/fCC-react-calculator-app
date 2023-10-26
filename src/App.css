@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Poppins&display=swap');
+
+:root {
+  --bg-clr: #041b14;
+  --primary-clr: #aa99f0;
+  --secondary-clr: #350816;
+  --accent-clr: #bbdf2a;
+  --text-clr: #dcfaf1;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg-clr);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+#calculator {
+  max-width: 600px;
+  max-height: 450px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: black;
+  border-radius: 10px 10px 0 0;
+}
+
+#display {
+  text-align: right;
+  background-color: rgb(17, 25, 41);
+  padding: .5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 21px;
+  height: 70px;
+  max-width: 295px;
+  font-family: 'Barlow', sans-serif;
+}
+
+.btns-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  height: 350px;
+  gap: 5px;
+}
+
+#clear {
+  grid-column: 1 / 3;
+}
+
+#equals {
+  grid-column: 4 / 5;
+  grid-row: 4 / 6;
+}
+
+#zero {
+  grid-column: 1 / 3;
+}
+
+.btn {
+  border-radius: 5px;
+  font-size: 24px;
+  transition: .05s ease-in-out transform;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 0;
+}
+
+
+
+/* ADDITIONAL */
+
+.action {
+  background-color: var(--accent-clr);
+}
+
+.operation {
+  background-color: var(--primary-clr);
+}
+
+.digit {
+  background-color: var(--text-clr);
+}
+
+#answer {
+  color: var(--accent-clr);
+}
+
+#expression {
+  color: var(--primary-clr);
+}
